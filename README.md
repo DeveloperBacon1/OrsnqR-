@@ -1,2 +1,0 @@
-# OrsnqR-
-THE UI BEST
