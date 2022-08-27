@@ -1,0 +1,44 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "OrsnqR - Clicking legends X", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Auto Farm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Auto Tap",
+	Default = false,
+	Callback = function(Value)
+		_G.a = Value
+        while _G.a == true do
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.Click:FireServer()
+wait(0.0000000000000000000000000000000000000000000000000001)
+            end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.a = Value
+        while _G.a == true do
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.Rebirth:FireServer(1)
+wait(0.0000000000000000000000000000000000000000000000000001)
+            end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Hatch",
+	Default = false,
+	Callback = function(Value)
+		_G.a = Value
+        while _G.a == true do
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.Click:FireServer()
+wait(0.0000000000000000000000000000000000000000000000000001)
+            end
+	end    
+})
