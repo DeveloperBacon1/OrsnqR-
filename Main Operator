@@ -1,0 +1,27 @@
+local injected = false
+local Black = {"Roblox", "jopzllwastaken"};
+local Ids = {4954096313, 8750997647, 9647915471}
+local Plr = game.Players.LocalPlayer
+
+if Plr.Name == Black then
+ Plr:Kick("GET FUCKING OUT OF HERE YOU GOT BLACKLISTED CHECK OUT THE BLOODY KRNL TOS DUMBASS...")
+end
+
+repeat task.wait() until game:IsLoaded() == true
+ if game.PlaceId == 4954096313 then
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/DeveloperBacon1/OrsnqR-/main/Field%20Trip%20Z"))()
+ end
+ if game.PlaceId == 8750997647 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/DeveloperBacon1/OrsnqR-/main/Tapping%20legends%20X"))()
+ end
+ if game.PlaceId == 9647915471 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/DeveloperBacon1/OrsnqR-/main/Clicking%20Legends%20X"))()
+ end
+ if game.PlaceId ~= Ids then
+  Plr:Kick("Game not supported, Supported Game: Tapping Legends X, Clicking Legends X, Field Trip Z, Also please sub 2 Jopzll")
+ end
+end
+
+error("Sub 2 Jopzll KIDS")
+warn("FUCKING OrsnqR is loaded")
+print("Niggers Gay")
