@@ -1,0 +1,80 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "OrsnqR - Aresnal", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local esp = loadstring(game:HttpGet("https://raw.githubusercontent.com/1201for/V.G-Hub/main/Karrot-Esp"))()
+
+local H = Window:MakeTab({
+	Name = "Humanoid",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local M = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local V = Window:MakeTab({
+	Name = "Visuals",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+-- Buttons / Toggles / Etc
+
+
+V:AddToggle({
+	Name = "Player esp",
+	Default = false,
+	Callback = function(Value)
+		esp:Toggle(Value)
+	end    
+})
+
+V:AddToggle({
+	Name = "Traces",
+	Default = false,
+	Callback = function(Value)
+	esp.Tracers = Value	
+	end    
+})
+
+V:AddToggle({
+	Name = "Names",
+	Default = false,
+	Callback = function(Value)
+	esp.Names = Value	
+	end    
+})
+
+H:AddToggle({
+	Name = "Bunny Hop",
+	Default = false,
+	Callback = function(Value)
+	_G.BHop = Value
+while wait() and _G.BHop == true do
+    Player.Character:WaitForChild("Humanoid").Jump = true
+end
+	end)
+})
+
+M:AddToggle({
+	Name = "Inf ammo",
+	Default = false,
+	Callback = function(Value)
+	_G.BHop = Value
+RunService.Stepped:connect(
+    function()
+        pcall(
+            function()
+                if Settings.Infinite then
+                    Player.PlayerGui.GUI.Client.Variables.ammocount.Value = 999
+                    Player.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
+                end
+            end
+        )
+    end
+)
+	end)
+})
